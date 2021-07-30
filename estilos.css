@@ -13,6 +13,8 @@ position: fixed;
 width: 100%;
 top: 0;
 left: 0;
+display: flex;
+justify-content: center;
 /*color: #767676;*/
 }
 .naveg{
