@@ -19,7 +19,6 @@ justify-content: center;
 }
 .naveg{
 display: flex;
-justify-content: space-between;
 align-items: center;
 }
 
@@ -48,12 +47,13 @@ align-items: center;
 .hoy{
     font-size: 2rem;
     font-weight: bold;
-    padding: 0 2rem;
-    line-height: 8rem;
+    padding: 0 1rem;
+    border-radius: 1rem;
     text-decoration: none;
     color: black;
+    cursor:pointer
 }
-.hoy a:hover{
+.hoy:hover{
     background-color: rgb(190, 183, 183);
     transition: 0.5s;
 }
@@ -73,6 +73,9 @@ align-items: center;
     border: none;
     background-color: #efefef;
     
+}
+.busqueda-input:focus{
+    outline: none;
 }
 .imagen-login{
     width: 2.5rem;
@@ -98,6 +101,7 @@ align-items: center;
     display: block;
     border-radius: 2rem;
     color:darkgrey;
+    cursor: pointer;
 }
 .nav-lista-link:hover, .nav-lista-link:active{
     background-color: rgb(190, 183, 183);
@@ -114,13 +118,7 @@ main{
     height: 20px;
     display: none;
 }
-.btn-aparecer,.btn-aparecer2{
-    display: none;
-}
-.div-hover:hover .btn-aparecer, 
-.div-hover:hover .btn-aparecer2{
-    display: flex;
-}
+
 .galeria-item{
     position: relative;
 }
@@ -134,13 +132,38 @@ main{
    filter: opacity(2);
    transform: scale(1.04);
     border-radius: 1rem;
+    cursor: pointer;
 }
+
 .lista-imagen{
+    display: none;
+}
+.galeria-item:hover .lista-imagen{
+    display: block;
     position: absolute;
     bottom: 0;
     margin-left: 1rem;
     display: flex;
     justify-content:space-between;
+
+}
+.btn-save{
+    display: none;
+    
+}
+.galeria-item:hover .btn-save {
+    display: block;
+    color: white;
+    background-color: red;
+    padding: 0 1rem;
+    border-style: groove;
+    border-radius: 1rem;
+    top:0%;
+    margin-top: 7%;
+    margin-left: 50%;
+    position: absolute;
+    cursor: pointer;
+
 }
 .naveg2{
     
@@ -165,6 +188,9 @@ main{
     grid-auto-rows: 15rem;
     padding: 2rem;
     grid-gap: 2rem;
+}
+.naveg{
+    justify-content: space-around;
 }
 .naveg2{
     display: none;
